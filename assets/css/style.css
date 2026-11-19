@@ -1,0 +1,135 @@
+/* =========================================================
+   Bloom&Books - Custom Styles & Glassmorphism Enhancements
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+:root {
+    --color-primary: #3A0CA3;
+    --color-primary-dark: #2A0876;
+    --color-primary-light: #5A1FD6;
+    --color-secondary: #F72585;
+    --color-secondary-hover: #D91A72;
+    --color-bg: #FAFAFE;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-logo: 'Cormorant Garamond', 'Cinzel', Georgia, serif;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: #1E293B;
+    overflow-x: hidden;
+    letter-spacing: -0.011em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fancy Logo & Brand Typography */
+.font-logo {
+    font-family: var(--font-logo);
+    letter-spacing: 0.02em;
+}
+
+.fancy-ampersand {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Minimalist Clean Content Typography (Sans-Serif) */
+.font-content {
+    font-family: var(--font-sans);
+    letter-spacing: -0.011em;
+}
+
+h1, h2, h3, h4, h5, h6,
+.content-heading {
+    font-family: var(--font-sans) !important;
+    letter-spacing: -0.02em;
+}
+
+/* Glassmorphism Classes */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 25px -5px rgba(58, 12, 163, 0.06), 0 8px 10px -6px rgba(58, 12, 163, 0.04);
+}
+
+.glass-card-hover {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 30px -10px rgba(58, 12, 163, 0.12), 0 10px 15px -5px rgba(247, 37, 133, 0.08);
+    border-color: rgba(247, 37, 133, 0.3);
+}
+
+.glass-input {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    transition: all 0.2s ease;
+}
+
+.glass-input:focus {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(58, 12, 163, 0.15);
+    outline: none;
+}
+
+/* Ambient glow blobs */
+.glow-blob-purple {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(58, 12, 163, 0.22) 0%, rgba(58, 12, 163, 0) 70%);
+    filter: blur(50px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.glow-blob-magenta {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(247, 37, 133, 0.20) 0%, rgba(247, 37, 133, 0) 70%);
+    filter: blur(45px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+}
+
+/* Text Gradient */
+.text-gradient-primary {
+    background: linear-gradient(135deg, #3A0CA3 0%, #7209B7 60%, #F72585 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
